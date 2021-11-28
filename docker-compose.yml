@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web-api:
+    build: 
+      context: .
+      dockerfile: WebAPI/Dockerfile
+    environment:
+          - ASPNETCORE_URLS=http://+:80
+    ports:
+          - "8090:80"
